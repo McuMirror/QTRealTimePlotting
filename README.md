@@ -1,18 +1,18 @@
 # Plotting Pressure Measurements in Real-Time via USB
 The 'Real-Time USB Pressure Monitor' software program is used to establish a USB connection with an external pressure transducer and plot pressure measurements on a plot window that updates in real-time as a strip chart. The main GUI is a simple dialog that guides the user through the top-level steps to establish a USB connection and start/pause the plotting. A second window containing a strip chart is created when the 'Start Plotting' button is clicked. The strip chart window is resizable and plotting can be paused for review and restarted. Although pressure units and ranges can easily be modified in software, the current example application records pressure between -75 to 75 cm-H2O as indicated on the vertical axis of the strip chart window. Time is labeled every two seconds on the horizontal axis. The GUI ‘look-n-feel’ matches the current windows desktop theme (apparently, I like the really old desktop themes from Windows).
-![Dialog_01](https://github.com/CaryChamplin/QTRealTimePlotting/blob/master/dialog_01.png)
-![Plot_01](https://github.com/CaryChamplin/QTRealTimePlotting/blob/master/plot_01.png)
+![Dialog_01](https://github.com/CaryChamplin/QTRealTimePlotting/dialog_01.png)
+![Plot_01](https://github.com/CaryChamplin/QTRealTimePlotting/plot_01.png)
 ###Operation
 It was definitely my intent to keep the GUI dialog simple and its operation intuitive. The initial GUI provides a button to establish a USB port connection to the pressure transducer.
-![Dialog_01](https://github.com/CaryChamplin/QTRealTimePlotting/blob/master/dialog_01.png)
+![Dialog_01](https://github.com/CaryChamplin/QTRealTimePlotting/dialog_01.png)
 Clicking on the ‘Connect to USB port’ button causes the software to search for a USB port connection to the pressure transducer every 0.5 second until a USB connection is established or the ‘Cancel search’ button is clicked.
-![Dialog_02](https://github.com/CaryChamplin/QTRealTimePlotting/blob/master/dialog_02.png)
+![Dialog_02](https://github.com/CaryChamplin/QTRealTimePlotting/dialog_02.png)
 After a USB connection is established, the ‘Start Plotting’ button is enabled. Clicking on the ‘Start Plotting’ button brings up the strip chart plotting window and starts plotting pressure measurements. In the current example program, a simple handshake is used:-	Every 20 msec (i.e., 50 samples/second), transmit request (“4\n”) via USB port for a pressure measurement.-	Receive character stream between 1 to 5 characters consisting of a possible negative sign and up to four digits (-7500 to 7500). Dividing the received integer by 100 yields pressure in units of cm-H2O.
-![Dialog_03](https://github.com/CaryChamplin/QTRealTimePlotting/blob/master/dialog_03.png)
+![Dialog_03](https://github.com/CaryChamplin/QTRealTimePlotting/dialog_03.png)
 After a plot is started, the ‘Pause Plotting’ button is enabled. Plotting can be paused and restarted. The plotting window can be resized in real-time.
-![Dialog_04](https://github.com/CaryChamplin/QTRealTimePlotting/blob/master/dialog_04.png)
+![Dialog_04](https://github.com/CaryChamplin/QTRealTimePlotting/dialog_04.png)
 If the ‘Pause Plotting’ button is clicked, two options become enabled: 'Break USB Connection' and 'Re-Start Plotting'. Clicking on the ‘Break USB connection’ button will close the plotting window.
-![Dialog_05](https://github.com/CaryChamplin/QTRealTimePlotting/blob/master/dialog_05.png)
+![Dialog_05](https://github.com/CaryChamplin/QTRealTimePlotting/blob/dialog_05.png)
 ###Software Development Framework
 [Qt](https://www.qt.io) is a cross-platform development environment that can be used for developing application software with GUIs. Software is primarily written in C++ (such as the ‘Real-Time USB Pressure Monitor’ application that runs on Windows). The only unique concept in using Qt is the use of signals and slots to handle the events. Numerous examples are provided by [Qt](https://www.qt.io).
 -	[Qt Creator](https://www.qt.io/ide/)
