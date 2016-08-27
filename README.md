@@ -2,6 +2,7 @@
 The 'Real-Time USB Pressure Monitor' software program is used to establish a USB connection with an external pressure transducer and plot pressure measurements on a plot window that updates in real-time as a strip chart. The main GUI is a simple dialog that guides the user through the top-level steps to establish a USB connection and start/pause the plotting. A second window containing a strip chart is created when the 'Start Plotting' button is clicked. The strip chart window is resizable and plotting can be paused for review and restarted. Although pressure units and ranges can easily be modified in software, the current example application records pressure between -75 to 75 cm-H2O as indicated on the vertical axis of the strip chart window. Time is labeled every two seconds on the horizontal axis. The GUI ‘look-n-feel’ matches the current windows desktop theme (apparently, I like the really old desktop themes from Windows).
 
 ![Dialog_01](https://github.com/CaryChamplin/QTRealTimePlotting/blob/develop/dialog_01.png)
+
 ![Plot_01](https://github.com/CaryChamplin/QTRealTimePlotting/blob/develop/plot_01.png)
 
 ###Operation
@@ -23,7 +24,7 @@ After a plot is started, the ‘Pause Plotting’ button is enabled. Plotting ca
 
 If the ‘Pause Plotting’ button is clicked, two options become enabled: 'Break USB Connection' and 'Re-Start Plotting'. Clicking on the ‘Break USB connection’ button will close the plotting window.
 
-![Dialog_05](https://github.com/CaryChamplin/QTRealTimePlotting/blob/dialog_05.png)
+![Dialog_05](https://github.com/CaryChamplin/QTRealTimePlotting/blob/develop/dialog_05.png)
 
 ###Software Development Framework
 [Qt](https://www.qt.io) is a cross-platform development environment that can be used for developing application software with GUIs. Software is primarily written in C++ (such as the ‘Real-Time USB Pressure Monitor’ application that runs on Windows). The only unique concept in using Qt is the use of signals and slots to handle the events. Numerous examples are provided by [Qt](https://www.qt.io).
