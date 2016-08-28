@@ -30,6 +30,7 @@ If the ‘Pause Plotting’ button is clicked, two options become enabled: 'Brea
 [Qt](https://www.qt.io) is a cross-platform development environment that can be used for developing application software with GUIs. Software is primarily written in C++ (such as the ‘Real-Time USB Pressure Monitor’ application that runs on Windows). The only unique concept in using Qt is the use of signals and slots to handle the events. Numerous examples are provided by [Qt](https://www.qt.io).
 -	[Qt Creator](https://www.qt.io/ide/)
 -	[Qt Signals and Slots](http://doc.qt.io/qt-5/signalsandslots.html)
+
 [QCustomPlot](http://www.qcustomplot.com) is a widget that works with [Qt](https://www.qt.io) and excels at plotting and data visualization. It consists of two files (qcustomplot.cpp and qcustomplot.h). Plots are easy to code and have an extensive feature set for customization. Publication quality 2D plots, charts and graphs can be produced. Performance supports real-time data plotting and visualization applications. The [Real-Time Data Demo](http://www.qcustomplot.com/index.php/demos/realtimedatademo) was the basis for this example.
 
 ###Software Code
