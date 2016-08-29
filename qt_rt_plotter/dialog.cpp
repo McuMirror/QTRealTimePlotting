@@ -58,10 +58,6 @@ Dialog::~Dialog()
 //---------------------------------------------------------
 void Dialog::usbConnectionDataSlot()
 {
-    //-----------------------------------------------------
-    // Searches com ports for usb arduino connection.
-    // When port is found, its modes are configured.
-    //-----------------------------------------------------
     if (rtpUSB_is_available == false)
     {
         foreach(const QSerialPortInfo &serialPortInfo, QSerialPortInfo::availablePorts())
