@@ -38,7 +38,11 @@ The software consists of two classes (Dialog and MainWindow). The Dialog class c
 A simple request/reply handshake protocol is used to get the measurements from the pressure transducer. The request is the text string “4\n” and the reply is received in the form of a text string, ranging from 1 to 5 characters in length, representing a number from -7500 to 7500 (representing -75 to +75 cm-H2O). For plotting fidelity and smoothness, 50 samples/sec (timer interval of 20 milliseconds) is an adequate measurement rate.The source files can be grouped into two classes (dialog and mainwindow) and a main.cpp file. For each class, there is a source file, a header file, and a graphical ui file. Finally, [Qt](https://www.qt.io) uses a project file.
 
 ###Standalone executable and DLL's
-After the ‘Real-Time USB Pressure Monitor’ is compiled in a release configuration, it becomes an executable file (qt_tr_plotter.exe) but still requires a set of DLL files (located within the local [Qt](https://www.qt.io) directory structure) to be able to run as a standalone software program on Windows. For this specific software program, the relevant DLL files listed below should be included in the folder with the ‘Real-Time USB Pressure Monitor’ executable file:-	libgss_s_dw2-1.dll-	libstdc++-6.dll-	libwinpthread-1.dll-	Qt5Core.dll-	Qt5Gui.dll-	Qt5SerialPort.dll-	Qt5Widgets.dll
+After the ‘Real-Time USB Pressure Monitor’ is compiled in a release configuration, it becomes an executable file (qt_tr_plotter.exe) but still requires a set of DLL files (located within the local [Qt](https://www.qt.io) directory structure) to be able to run as a standalone software program on Windows. For this specific software program, the relevant DLL files listed below should be included in the folder (note: qwindows.dll needs to reside in a subfolder 'platforms' along with the ‘Real-Time USB Pressure Monitor’ executable file:
+
+- qt_tr_plotter.exe- libgss_s_dw2-1.dll- libstdc++-6.dll- libwinpthread-1.dll- Qt5Core.dll- Qt5Gui.dll- Qt5SerialPort.dll- Qt5Widgets.dll
+- libEGL.dll
+- platforms\qwindows.dll
 
 ###Summary
 Using Qt Creator and QCustomPlot provides many benefits to creating GUI panels/dialogs and plotting options. It is easy to learn with the only unique concept being signals and slots to handle the events.
