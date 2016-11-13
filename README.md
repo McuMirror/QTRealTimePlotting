@@ -47,4 +47,4 @@ After the ‘Real-Time USB Pressure Monitor’ is compiled in a release configur
 ###Summary
 Using Qt Creator and QCustomPlot provides many benefits to creating GUI panels/dialogs and plotting options. It is easy to learn with the only unique concept being signals and slots to handle the events.
 
-Read the [post](http://champlintechnologiesllc.com/2016/08/28/post24_qt-realtime-plotting/) on [Champlin Technologies LLC](http://champlintechnologiesllc.com) for more info.
+Read the [post](http://champlintechnologiesllc.com/real-time-plotting-using-qt-and-qcustomplot/) on [Champlin Technologies LLC](http://champlintechnologiesllc.com) for more info.
